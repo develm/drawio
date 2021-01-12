@@ -53,10 +53,10 @@ EditorUi = function(editor, container, lightbox)
     // Creates the user interface
 	this.actions = new Actions(this);
 	this.menus = this.createMenus();
+	this.createDivs();
 	
 	if (!graph.standalone)
 	{
-		this.createDivs();
 		this.createUi();
 		this.refresh();
 
@@ -2197,11 +2197,14 @@ EditorUi.prototype.initCanvas = function()
 				{
 					if (toolbarConfig.fullscreenBtn.url)
 					{
-						graph.openLink(toolbarConfig.fullscreenBtn.url);
+//						graph.openLink(toolbarConfig.fullscreenBtn.url);
+
+						graph.openLink(window.location.href);
 					}
 					else
 					{
-						graph.openLink(window.location.href);
+//						graph.openLink(window.location.href);
+						graph.openLink(toolbarConfig.fullscreenBtn.url);
 					}
 					
 					mxEvent.consume(evt);

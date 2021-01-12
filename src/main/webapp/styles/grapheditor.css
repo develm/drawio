@@ -59,7 +59,12 @@
 	font-size:0px;
 	outline:none;
 }
-.geMenubar, .geToolbar {
+.geMenubar {
+	white-space:nowrap;
+	display:none;
+	width:100%;
+}
+.geToolbar {
 	white-space:nowrap;
 	display:block;
 	width:100%;

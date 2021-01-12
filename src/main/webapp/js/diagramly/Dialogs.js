@@ -215,37 +215,37 @@ var StorageDialog = function(editorUi, fn, rowLimit)
 	{
 		count = 0;
 		
-		if (typeof window.DriveClient === 'function')
-		{
-			addLogo(IMAGE_PATH + '/google-drive-logo.svg', mxResources.get('googleDrive'), App.MODE_GOOGLE, 'drive');
-		}
-	
-		if (typeof window.OneDriveClient === 'function')
-		{
-			addLogo(IMAGE_PATH + '/onedrive-logo.svg', mxResources.get('oneDrive'), App.MODE_ONEDRIVE, 'oneDrive');
-		}
+//		if (typeof window.DriveClient === 'function')
+//		{
+//			addLogo(IMAGE_PATH + '/google-drive-logo.svg', mxResources.get('googleDrive'), App.MODE_GOOGLE, 'drive');
+//		}
+//
+//		if (typeof window.OneDriveClient === 'function')
+//		{
+//			addLogo(IMAGE_PATH + '/onedrive-logo.svg', mxResources.get('oneDrive'), App.MODE_ONEDRIVE, 'oneDrive');
+//		}
 	
 		addLogo(IMAGE_PATH + '/osa_drive-harddisk.png', mxResources.get('device'), App.MODE_DEVICE);
 		
-		if (isLocalStorage && (urlParams['browser'] == '1' || urlParams['offline'] == '1'))
-		{
-			addLogo(IMAGE_PATH + '/osa_database.png', mxResources.get('browser'), App.MODE_BROWSER);
-		}
-		
-		if (typeof window.DropboxClient === 'function')
-		{
-			addLogo(IMAGE_PATH + '/dropbox-logo.svg', mxResources.get('dropbox'), App.MODE_DROPBOX, 'dropbox');
-		}
-
-		if (editorUi.gitHub != null)
-		{
-			addLogo(IMAGE_PATH + '/github-logo.svg', mxResources.get('github'), App.MODE_GITHUB, 'gitHub');
-		}
-		
-		if (editorUi.gitLab != null)
-		{
-			addLogo(IMAGE_PATH + '/gitlab-logo.svg', mxResources.get('gitlab'), App.MODE_GITLAB, 'gitLab');
-		}
+//		if (isLocalStorage && (urlParams['browser'] == '1' || urlParams['offline'] == '1'))
+//		{
+//			addLogo(IMAGE_PATH + '/osa_database.png', mxResources.get('browser'), App.MODE_BROWSER);
+//		}
+//
+//		if (typeof window.DropboxClient === 'function')
+//		{
+//			addLogo(IMAGE_PATH + '/dropbox-logo.svg', mxResources.get('dropbox'), App.MODE_DROPBOX, 'dropbox');
+//		}
+//
+//		if (editorUi.gitHub != null)
+//		{
+//			addLogo(IMAGE_PATH + '/github-logo.svg', mxResources.get('github'), App.MODE_GITHUB, 'gitHub');
+//		}
+//
+//		if (editorUi.gitLab != null)
+//		{
+//			addLogo(IMAGE_PATH + '/gitlab-logo.svg', mxResources.get('gitlab'), App.MODE_GITLAB, 'gitLab');
+//		}
 	};
 	
 	div.appendChild(buttons);
