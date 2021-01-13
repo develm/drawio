@@ -16,7 +16,7 @@
 
   <name>drawio spring-boot Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://localhost:8080/</url>
+  <url>http://localhost:8085/</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -41,6 +41,18 @@
 <!--      <groupId>org.springframework.boot</groupId>-->
 <!--      <artifactId>spring-boot-starter-security</artifactId>-->
 <!--    </dependency>-->
+    <!-- 引入freeMarker的依赖包. -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-freeMarker</artifactId>
+      <version>1.2.5.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.2.4</version>
+    </dependency>
 
     <dependency>
       <groupId>junit</groupId>

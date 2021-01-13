@@ -23,6 +23,10 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.alibaba.druid.sql.ast.SQLStatement;
+import com.alibaba.druid.sql.parser.ParserException;
+import com.alibaba.druid.sql.parser.SQLParserUtils;
+import com.alibaba.druid.sql.parser.SQLStatementParser;
 import org.w3c.dom.Element;
 
 import com.mxgraph.canvas.mxGraphics2DCanvas;
@@ -8194,14 +8198,6 @@ public class mxGraph extends mxEventSource
 		builder.append("]");
 
 		return builder.toString();
-	}
-
-	/**
-	 * Logs the version number on the console. 
-	 */
-	public static void main(String[] args)
-	{
-		log.info("mxGraph version \"" + VERSION + "\"");
 	}
 
 }
