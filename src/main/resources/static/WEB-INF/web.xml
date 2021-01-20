@@ -10,7 +10,7 @@
     <description/>
     <display-name>SaveServlet</display-name>
     <servlet-name>SaveServlet</servlet-name>
-    <servlet-class>com.sql.er.online.SaveServlet</servlet-class>
+    <servlet-class>com.sql.er.imports.online.SaveServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SaveServlet</servlet-name>
@@ -24,7 +24,7 @@
     <description/>
     <display-name>ProxyServlet</display-name>
     <servlet-name>ProxyServlet</servlet-name>
-    <servlet-class>com.sql.er.online.ProxyServlet</servlet-class>
+    <servlet-class>com.sql.er.imports.online.ProxyServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ProxyServlet</servlet-name>
@@ -44,7 +44,7 @@
     <description/>
     <display-name>EmbedServlet2</display-name>
     <servlet-name>EmbedServlet2</servlet-name>
-    <servlet-class>com.sql.er.online.EmbedServlet2</servlet-class>
+    <servlet-class>com.sql.er.imports.online.EmbedServlet2</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>EmbedServlet2</servlet-name>
@@ -54,7 +54,7 @@
     <description/>
     <display-name>GoogleGadgetServlet</display-name>
     <servlet-name>GoogleGadgetServlet</servlet-name>
-    <servlet-class>com.sql.er.online.GoogleGadgetServlet</servlet-class>
+    <servlet-class>com.sql.er.imports.online.GoogleGadgetServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>GoogleGadgetServlet</servlet-name>
@@ -64,7 +64,7 @@
     <description/>
     <display-name>ImgurRedirect</display-name>
     <servlet-name>ImgurRedirect</servlet-name>
-    <servlet-class>com.sql.er.online.ImgurRedirectServlet</servlet-class>
+    <servlet-class>com.sql.er.imports.online.ImgurRedirectServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ImgurRedirect</servlet-name>
@@ -74,7 +74,7 @@
     <description/>
     <display-name>GitHubServlet</display-name>
     <servlet-name>GitHubServlet</servlet-name>
-    <servlet-class>com.sql.er.online.GitHubServlet</servlet-class>
+    <servlet-class>com.sql.er.imports.online.GitHubServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>GitHubServlet</servlet-name>
@@ -84,7 +84,7 @@
     <description/>
     <display-name>AppShortcutServlet</display-name>
     <servlet-name>AppShortcutServlet</servlet-name>
-    <servlet-class>com.sql.er.online.AppShortcutServlet</servlet-class>
+    <servlet-class>com.sql.er.imports.online.AppShortcutServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AppShortcutServlet</servlet-name>
@@ -93,7 +93,7 @@
   <servlet>
     <display-name>LogServlet</display-name>
     <servlet-name>LogServlet</servlet-name>
-    <servlet-class>com.sql.er.online.LogServlet</servlet-class>
+    <servlet-class>com.sql.er.imports.online.LogServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LogServlet</servlet-name>
@@ -103,7 +103,7 @@
     <description/>
     <display-name>MSGraphAuthServlet</display-name>
     <servlet-name>MSGraphAuthServlet</servlet-name>
-    <servlet-class>com.sql.er.online.MSGraphAuthServlet</servlet-class>
+    <servlet-class>com.sql.er.imports.online.MSGraphAuthServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>MSGraphAuthServlet</servlet-name>
@@ -113,7 +113,7 @@
     <description/>
     <display-name>GoogleAuthServlet</display-name>
     <servlet-name>GoogleAuthServlet</servlet-name>
-    <servlet-class>com.sql.er.online.GoogleAuthServlet</servlet-class>
+    <servlet-class>com.sql.er.imports.online.GoogleAuthServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>GoogleAuthServlet</servlet-name>
@@ -123,7 +123,7 @@
     <description/>
     <display-name>ConverterServlet</display-name>
     <servlet-name>ConverterServlet</servlet-name>
-    <servlet-class>com.sql.er.online.ConverterServlet</servlet-class>
+    <servlet-class>com.sql.er.imports.online.ConverterServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ConverterServlet</servlet-name>
@@ -133,7 +133,7 @@
     <description/>
     <display-name>ExportProxyServlet</display-name>
     <servlet-name>ExportProxyServlet</servlet-name>
-    <servlet-class>com.sql.er.online.ExportProxyServlet</servlet-class>
+    <servlet-class>com.sql.er.imports.online.ExportProxyServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ExportProxyServlet</servlet-name>
