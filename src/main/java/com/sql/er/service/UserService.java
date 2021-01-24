@@ -2,8 +2,8 @@ package com.sql.er.service;
 
 import com.sql.er.dao.mapper.UserMapper;
 import com.sql.er.dao.model.User;
-import com.sql.er.utils.BCrypt;
-import com.sql.er.utils.Result;
+import com.sql.er.common.utils.BCrypt;
+import com.sql.er.common.utils.Result;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 

@@ -230,7 +230,7 @@ html,body{
 
 /*.btn.signin_btn*/
 .btn.signin_btn,.btn.signin_btn:focus {
-    width: 620px;
+    width: 100%;
     padding: 0;
     height: 60px;
     background: #26d9b3;

@@ -38,11 +38,16 @@
 								<form action="login/signInSubmit">
 									<div class="form-group">
 									    <label for="userPhone">手机号</label>
-										<input type="phone" class="form-control" id="userPhone" placeholder="请输入手机号">
+										<input type="phone" class="form-control" id="userPhone" name="userPhone" placeholder="请输入手机号">
 									</div><!--/.form-group -->
 									<div class="form-group">
 										<label for="userPassword">密码</label>
-									    <input type="password" class="form-control" id="userPassword" placeholder="请输入密码">
+									    <input type="password" class="form-control" id="userPassword" name="userPassword" placeholder="请输入密码">
+									</div><!--/.form-group -->
+									<div class="form-group">
+										<label for="imgCode">验证码</label>
+										<input type="text" class="form-control" id="imgCode" name="imgCode" placeholder="请输入验证码" style="width: 80%;">
+										<div class="ui-form-explain"><img src="../images/yzm.jpg" class="yzm-img" style="position: absolute;right: 10px;top: 190px;"></div>
 									</div><!--/.form-group -->
 								</form><!--/form -->
 							</div><!--/.signin-form -->
@@ -73,7 +78,7 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="signin-footer">
-								<button type="button" class="btn signin_btn signin_btn_two" data-toggle="modal" data-target=".signin_modal">
+								<button type="button" onclick="signIn()" class="btn signin_btn signin_btn_two" data-toggle="modal" data-target=".signin_modal">
 								登录
 								</button>
 								<p style="margin-right: inherit;">
@@ -91,7 +96,33 @@
 		</section><!--/.signin -->
 		
 		<!-- signin end -->
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript">
+        function refreshCode(){
+              $.post("/login/sendMsgCode",{},function(result){
+                  if(result.code == 0){
+                    alert("success");
+                  }else{
+                       alert(result.msg);
+                     }
+                });
+        }
 
+        function signIn(){
+            var sendData={
+                "userPhone":$("#userPhone").val(),
+                "imgCode":$("#imgCode").val(),
+                "userPassword":$("#userPassword").val()
+            };
+              $.post("/login/signInSubmit",sendData,function(result){
+                  if(result.code == 0){
+                    alert("success");
+                  }else{
+                       alert(result.msg);
+                     }
+                });
+        }
+    </script>
     </body>
 	
 </html>

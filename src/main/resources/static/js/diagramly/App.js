@@ -1833,43 +1833,43 @@ App.prototype.showNameChangeBanner = function()
  */
 App.prototype.showDownloadDesktopBanner = function()
 {
-	var link = 'https://get.diagrams.net/';
-
-	if (this.showBanner('DesktopFooter', mxResources.get('downloadDesktop'), mxUtils.bind(this, function()
-		{
-			this.openLink(link);
-		})))
-	{
-		// Downloads installer for macOS and Windows
-		mxUtils.get('https://api.github.com/repos/jgraph/drawio-desktop/releases/latest', mxUtils.bind(this, function(req)
-		{
-			try
-			{
-				var rel = JSON.parse(req.getText());
-
-				if (rel != null)
-				{
-					if (rel.tag_name != null && rel.name != null && rel.html_url != null)
-					{
-						if (mxClient.IS_MAC)
-						{
-							link = 'https://github.com/jgraph/drawio-desktop/releases/download/' +
-		        				rel.tag_name + '/draw.io-' + rel.name + '.dmg';
-						}
-						else if (mxClient.IS_WIN)
-						{
-							link = 'https://github.com/jgraph/drawio-desktop/releases/download/' +
-		        				rel.tag_name + '/draw.io-' + rel.name + '-windows-installer.exe';
-						}
-					}
-				}
-			}
-			catch (e)
-			{
-				// ignore
-			}
-		}));
-	}
+//	var link = 'https://get.diagrams.net/';
+//
+//	if (this.showBanner('DesktopFooter', mxResources.get('downloadDesktop'), mxUtils.bind(this, function()
+//		{
+//			this.openLink(link);
+//		})))
+//	{
+//		// Downloads installer for macOS and Windows
+//		mxUtils.get('https://api.github.com/repos/jgraph/drawio-desktop/releases/latest', mxUtils.bind(this, function(req)
+//		{
+//			try
+//			{
+//				var rel = JSON.parse(req.getText());
+//
+//				if (rel != null)
+//				{
+//					if (rel.tag_name != null && rel.name != null && rel.html_url != null)
+//					{
+//						if (mxClient.IS_MAC)
+//						{
+//							link = 'https://github.com/jgraph/drawio-desktop/releases/download/' +
+//		        				rel.tag_name + '/draw.io-' + rel.name + '.dmg';
+//						}
+//						else if (mxClient.IS_WIN)
+//						{
+//							link = 'https://github.com/jgraph/drawio-desktop/releases/download/' +
+//		        				rel.tag_name + '/draw.io-' + rel.name + '-windows-installer.exe';
+//						}
+//					}
+//				}
+//			}
+//			catch (e)
+//			{
+//				// ignore
+//			}
+//		}));
+//	}
 };
 
 /**

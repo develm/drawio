@@ -38,25 +38,32 @@
 					<div class="signin-form">
 						<div class=" ">
 							<div class=" ">
-								<form action="login/signUpSubmit">
+								<form action="/login/signUpSubmit">
 									<div class="form-group">
 										<label for="userPhone">手机号</label>
-										<input type="phone" class="form-control" id="userPhone" placeholder="请输入手机号">
-									</div><!--/.form-group -->
-									<div class="form-group">
-										<label for="msgCode">验证码</label>
-										<input type="email" class="form-control" id="msgCode" placeholder="请输入验证码">
+										<input type="phone" class="form-control" id="userPhone" name="userPhone" placeholder="请输入手机号">
 									</div><!--/.form-group -->
 									<div class="form-group">
 										<label for="userPassword">密码</label>
-										<input type="password" class="form-control" id="userPassword" placeholder="请输入密码">
+										<input type="password" class="form-control" id="userPassword" name="userPassword" placeholder="请输入密码">
 									</div><!--/.form-group -->
+									<div class="form-group">
+										<label for="rePassword">确认密码</label>
+										<input type="password" class="form-control" id="rePassword" name="rePassword" placeholder="请重新输入密码">
+									</div><!--/.form-group -->
+									<div class="form-group">
+										<label for="msgCode">手机验证码</label>
+										<input type="email" class="form-control" id="msgCode" name="msgCode" placeholder="请输入手机验证码" style="width: 80%;">
+									</div><!--/.form-group -->
+									<div class="ui-form-explain">
+										<button type="button" onclick="sendMsgCode()" class="btn signin_btn" style="width: 15%;align-self: auto;margin-left: 85%;margin-top: -90px;height: 36px;">发送验证码</button>
+									</div>
 								</form><!--/form -->
 							</div><!--/.col -->
 						</div><!--/.row -->
 
 					<div class="signin-footer">
-						<button type="button" class="btn signin_btn signin_btn_two" data-toggle="modal" data-target=".signin_modal">
+						<button type="button" onclick="signUp()" class="btn signin_btn signin_btn_two" data-toggle="modal" data-target=".signin_modal">
 						注册
 						</button>
 						<p style="margin-right: inherit;">
@@ -70,7 +77,33 @@
 			</div><!--/.container -->
 
 		</section><!--/.signin -->
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript">
+        function sendMsgCode(){
+              $.post("/login/sendMsgCode",{},function(result){
+                  if(result.code == 0){
+                    alert("success");
+                  }else{
+                       alert(result.msg);
+                     }
+                });
+        }
 
+        function signUp(){
+            var sendData={
+                "userPhone":$("#userPhone").val(),
+                "msgCode":$("#msgCode").val(),
+                "userPassword":$("#userPassword").val(),
+                "rePassword":$("#rePassword").val(),
+            };
+              $.post("/login/sendMsgCode",sendData,function(result){
+                  if(result.code == 0){
+                    alert("success");
+                  }else{
+                       alert(result.msg);
+                     }
+                });
+        }
+    </script>
     </body>
-	
 </html>

@@ -19,7 +19,7 @@ cursor: pointer;background-color: #4CAF50;color: white;padding: 10px 12px;displa
 		<div class="category">
 			<ul>
 				<li class="active">sql检查</li>
-				<li>ER图</li>
+				<li onclick="getUserFileList()">ER图</li>
 			</ul>
 <!--			<a href="javascript:;" class="prev"><span></span></a>-->
 <!--			<a href="javascript:;" class="next"><span></span></a>-->
@@ -155,7 +155,19 @@ cursor: pointer;background-color: #4CAF50;color: white;padding: 10px 12px;displa
                 $("#checkValue").val(result);
               });
         })
-	})
+	});
+
+	function getUserFileList(){
+          $.post("/getUserFileList",{},function(result){
+              if(result.code == 0){
+                alert("success");
+              }else if(result.code == -1){
+                window.location.href="/login/signin";
+              }else{
+                   alert(result.msg);
+                 }
+            });
+      }
 </script>
 </body>
 </html>

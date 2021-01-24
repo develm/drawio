@@ -61,7 +61,7 @@
 }
 .geMenubar {
 	white-space:nowrap;
-	display:none;
+	display:block;
 	width:100%;
 }
 .geToolbar {
